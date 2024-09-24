@@ -1,0 +1,75 @@
+<html>
+<head>
+<script>
+window.onkeydown = function kutu() {
+    var kutu = document.querySelector("div");
+    var sol = kutu.offsetLeft;
+    var yukari = kutu.offsetTop;
+    var kod = event.keyCode;
+    if (kod == 37) {
+        kutu.style.left = (sol - 100) + "px";
+        kutu.style.backgroundColor = "red";
+    }
+    if (kod == 38) {
+        kutu.style.top = (yukari - 100) + "px";
+        kutu.style.backgroundColor = "cyan";
+    }
+    if (kod == 39) {
+        kutu.style.left = (sol + 100) + "px";
+        kutu.style.backgroundColor = "purple";
+    }
+    if (kod == 40) {
+        kutu.style.top = (yukari + 100) + "px";
+        kutu.style.backgroundColor = "forestgreen";
+    }
+}
+</script>
+<style>
+body {
+    background: #1a1a1a;
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    width: 200px;
+    height: 200px;
+    border: 5px solid red;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.arrow {
+    position: absolute;
+    font-size: 32px; /* Daha büyük oklar */
+    color: white;
+}
+
+.left { left: -40px; }
+.up { top: -40px; }
+.right { right: -40px; }
+.down { bottom: -40px; }
+
+div > h6 {
+    margin: 0;
+    color: white;
+}
+</style>
+</head>
+<body>
+<div> 
+    <h6>Move</h6>
+    <div class="arrow up">&#11165</div>
+    <div class="arrow left">&#11164  </div>
+    <div class="arrow right">&#11166</div>
+    <div class="arrow down">&#11167</div>
+</div>
+
+<!-- https://www.youtube.com/@TahaKeskin -->
+
+
+</body>
+</html>
